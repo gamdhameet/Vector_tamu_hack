@@ -88,7 +88,7 @@ def search():
 
 if __name__ == '__main__':
     # Uncomment this line when deployingpublicly
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    app.run(host='0.0.0.0', port=4000, debug=True)
 
     # **Local Testing using Flask's test client**
     # with app.test_client() as client:
