@@ -10,7 +10,7 @@ app = Flask(__name__)
 model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
 
 # MongoDB Atlas Connection
-MONGODB_URI = "mongodb+srv://sreevikramr:b9baMr-Rk-D_tm_@tamuhack25db.b2or5.mongodb.net/?retryWrites=true&w=majority&appName=tamuHack25DB"
+MONGODB_URI = "mongodb+srv://sreevikramr:<>@tamuhack25db.b2or5.mongodb.net/?retryWrites=true&w=majority&appName=tamuHack25DB"
 client = MongoClient(MONGODB_URI)
 
 # Database and Collections
