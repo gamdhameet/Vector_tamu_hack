@@ -1,0 +1,3 @@
+take query -> get data
+process
+gg
