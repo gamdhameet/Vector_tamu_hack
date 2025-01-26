@@ -2,15 +2,17 @@ from flask import Flask, request, jsonify
 from sentence_transformers import SentenceTransformer
 from pymongo import MongoClient
 from sklearn.preprocessing import normalize
+from dotenv import load_dotenv
+import os
 
 # Initialize Flask app
 app = Flask(__name__)
 
 # Load the pre-trained model
 model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
-
+load_dotenv()
 # MongoDB Atlas Connection
-MONGODB_URI = "mongodb+srv://sreevikramr:<>@tamuhack25db.b2or5.mongodb.net/?retryWrites=true&w=majority&appName=tamuHack25DB"
+MONGODB_URI = os.getenv("MONGO_URL")
 client = MongoClient(MONGODB_URI)
 
 # Database and Collections
