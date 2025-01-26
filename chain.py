@@ -8,7 +8,7 @@ app = Flask(__name__)
 def get_place_id(bus_stop_name):
     """Convert a bus stop name to a Google Place ID."""
     places_url = "https://maps.googleapis.com/maps/api/place/findplacefromtext/json"
-    places_api_key = "AIzaSyB7NbovVKWIJj7bTupuBJcQqRbqwq8Glz4"
+    places_api_key = ""
     params = {
         "input": bus_stop_name,
         "inputtype": "textquery",
@@ -24,7 +24,7 @@ def get_place_id(bus_stop_name):
 def get_place_details(place_id):
     """Retrieve latitude, longitude, and address using a Place ID."""
     places_url = "https://maps.googleapis.com/maps/api/place/details/json"
-    places_api_key = "AIzaSyB7NbovVKWIJj7bTupuBJcQqRbqwq8Glz4"
+    places_api_key = ""
     params = {
         "place_id": place_id,
         "key": places_api_key
